@@ -9,7 +9,8 @@ public class Employee {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-
+    @Column(name = "Employee_id")
+    private long id;
     @Column(name = "name", nullable = false)
     private String name;
 

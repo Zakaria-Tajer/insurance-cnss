@@ -14,6 +14,11 @@
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password" >mypassword</property>
 
-        <mapping class="Models.Employee"></mapping>
+        <mapping class="Models.Agent"></mapping>
+        <mapping class="Models.Admin"></mapping>
+        <mapping class="Models.Patient"></mapping>
+        <mapping class="Models.Doctor"></mapping>
+        <mapping class="Models.Radio"></mapping>
+        <mapping class="Models.Analysis"></mapping>
     </session-factory>
 </hibernate-configuration>

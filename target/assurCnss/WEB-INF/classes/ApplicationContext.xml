@@ -9,4 +9,18 @@
     <bean id="dao" class="Models.EmployeeDao" />
     <bean id="info" class="Models.Employee" />
 
+
+    <bean id="agentDao" class="Dao.AgentDao" />
+    <bean id="agentInfo" class="Models.Agent" />
+    <bean id="adminDao" class="Dao.AdminDao" />
+    <bean id="adminInfo" class="Models.Admin" />
+    <bean id="patientDao" class="Dao.PatientDao" />
+    <bean id="patientInfo" class="Models.Patient" />
+    <bean id="doctorDao" class="Dao.DoctorDao" />
+    <bean id="doctorInfo" class="Models.Doctor" />
+    <bean id="radioDao" class="Dao.RadioDao" />
+    <bean id="radioInfo" class="Models.Radio" />
+    <bean id="analysisDao" class="Dao.AnalysisDao" />
+    <bean id="analysisInfo" class="Models.Analysis" />
+
 </beans>
