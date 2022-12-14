@@ -22,5 +22,7 @@
     <bean id="radioInfo" class="Models.Radio" />
     <bean id="analysisDao" class="Dao.AnalysisDao" />
     <bean id="analysisInfo" class="Models.Analysis" />
+    <bean id="dossierDao" class="Dao.DossierDao" />
+    <bean id="dossierInfo" class="Models.Dossier" />
 
 </beans>

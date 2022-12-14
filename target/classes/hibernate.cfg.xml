@@ -20,5 +20,6 @@
         <mapping class="Models.Doctor"></mapping>
         <mapping class="Models.Radio"></mapping>
         <mapping class="Models.Analysis"></mapping>
+        <mapping class="Models.Dossier"></mapping>
     </session-factory>
 </hibernate-configuration>

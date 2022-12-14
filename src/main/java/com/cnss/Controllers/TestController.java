@@ -88,5 +88,27 @@ public class TestController {
     }
 
 
+    @RequestMapping("/saveDossier")
+    public String saveDossier(Model model, @RequestParam("patient") int id,
+                              @RequestParam("doctor") int doctorId,
+                              @RequestParam("radio") int radioId,
+                              @RequestParam("analysis") int analysisId
+    ) {
+        Dossier dossiers = new Dossier();
+        conn = new ClassPathXmlApplicationContext("ApplicationContext.xml");
+        DossierDao dossier = conn.getBean("dossierDao", DossierDao.class);
+
+        dossiers.setPatient(id);
+        dossiers.setDoctorId(doctorId);
+        dossiers.setRadio(radioId);
+        dossiers.setAnalysis(analysisId);
+
+        dossier.saveDossier(dossiers);
+
+        System.out.println(id + " " + doctorId + " " +radioId + " " + analysisId);
+        return "addFolder";
+    }
+
+
 
 }

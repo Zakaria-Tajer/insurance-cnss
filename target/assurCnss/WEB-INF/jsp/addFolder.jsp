@@ -59,71 +59,74 @@
             <h1 class="text-center text-xl">Add Folder</h1>
 
             <div class="mt-2 space-y-3 flex items-center flex-col justify-center">
-                <div class="w-full flex items-center flex-col justify-center">
-                    <h1 class="text-left text-semibold">Patient Name </h1>
-                    <select class="w-1/2 rounded py-2 bg-gray-200 px-4">
+                <form class="w-full" method="post" action="saveDossier">
+                    <div class="w-full flex items-center flex-col justify-center">
+                        <h1 class="text-left text-semibold">Patient Name </h1>
+                        <select class="w-1/2 rounded py-2 bg-gray-200 px-4" name="patient">
 
-                        <%
-                            List<Object[]> patientRows = (List<Object[]>) request.getAttribute("patientList");
-//                            Object[] row : rows
+                            <%
+                                List<Object[]> patientRows = (List<Object[]>) request.getAttribute("patientList");
 
-                            for (Object[] row : patientRows){
+                                for (Object[] row : patientRows){
 
-                        %>
+                            %>
 
-                        <option> <%= row[0].toString() %></option>
-                        <%
-                            }
-                        %>
-                    </select>
-                </div>
-                <div class="w-full flex items-center flex-col justify-center">
-                    <h1 class="text-left text-semibold">Doctor </h1>
-                    <select class="w-1/2 rounded py-2 bg-gray-200 px-4">
-                        <%
-                            List<Object[]> doctorRows = (List<Object[]>) request.getAttribute("doctorList");
-                            for (Object[] row : doctorRows){
+                            <option value="<%= row[2].toString() %>"> <%= row[0].toString() %></option>
+                            <%
+                                }
+                            %>
+                        </select>
+                    </div>
+                    <div class="w-full flex items-center flex-col justify-center">
+                        <h1 class="text-left text-semibold">Doctor </h1>
+                        <select class="w-1/2 rounded py-2 bg-gray-200 px-4" name="doctor">
+                            <%
+                                List<Object[]> doctorRows = (List<Object[]>) request.getAttribute("doctorList");
+                                for (Object[] row : doctorRows){
 
-                        %>
+                            %>
 
-                        <option> <%= row[0].toString() %></option>
-                        <%
-                            }
-                        %>
-                    </select>
-                </div>
-                <div class="w-full flex items-center flex-col justify-center">
-                    <h1 class="text-left text-semibold">Radio </h1>
-                    <select class="w-1/2 rounded py-2 bg-gray-200 px-4">
-                        <%
-                            List<Object[]> radioRows = (List<Object[]>) request.getAttribute("radios");
-                            for (Object[] row : radioRows){
+                            <option value="<%= row[1].toString() %>"> <%= row[0].toString() %></option>
 
-                        %>
+                            <%
+                                }
+                            %>
+                        </select>
+                    </div>
+                    <div class="w-full flex items-center flex-col justify-center">
+                        <h1 class="text-left text-semibold">Radio </h1>
+                        <select class="w-1/2 rounded py-2 bg-gray-200 px-4" name="radio">
+                            <%
+                                List<Object[]> radioRows = (List<Object[]>) request.getAttribute("radios");
+                                for (Object[] row : radioRows){
 
-                        <option> <%= row[0].toString() %></option>
-                        <%
-                            }
-                        %>
-                    </select>
-                </div>
-                <div class="w-full flex items-center flex-col justify-center">
-                    <h1 class="text-left text-semibold">Analysis </h1>
-                    <select class="w-1/2 rounded py-2 bg-gray-200 px-4">
-                        <%
-                            List<Object[]> analysisRows = (List<Object[]>) request.getAttribute("analysis");
-                            for (Object[] row : analysisRows){
+                            %>
 
-                        %>
+                            <option value="<%= row[1].toString() %>"> <%= row[0].toString() %></option>
+                            <%
+                                }
+                            %>
+                        </select>
+                    </div>
+                    <div class="w-full flex items-center flex-col justify-center">
+                        <h1 class="text-left text-semibold">Analysis </h1>
+                        <select class="w-1/2 rounded py-2 bg-gray-200 px-4" name="analysis">
+                            <%
+                                List<Object[]> analysisRows = (List<Object[]>) request.getAttribute("analysis");
+                                for (Object[] row : analysisRows){
 
-                        <option> <%= row[0].toString() %></option>
-                        <%
-                            }
-                        %>
-                    </select>
-                </div>
+                            %>
 
-                <button class="py-2 px-10 bg-indigo-600">Submit</button>
+                            <option value="<%= row[1].toString() %>"> <%= row[0].toString() %></option>
+                            <%
+                                }
+                            %>
+                        </select>
+                    </div>
+
+                <button class="py-2 px-14 bg-indigo-600 rounded-md">Submit</button>
+                </form>
+
             </div>
 
 
